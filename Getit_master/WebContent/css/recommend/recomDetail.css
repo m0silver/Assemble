@@ -1,0 +1,532 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+/* 검색창 css 부분 */
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
+
+body {
+    width: 1890px;
+    height: 4500px;
+    font-family: 'Sawarabi Gothic', sans-serif;
+}
+
+.card {
+	font-family: 'Nanum Gothic', sans-serif;
+	width: 90%;
+	margin: 0 auto;
+	color: black;
+}
+
+.card thead {
+	width: 87.5%;
+}
+
+.card thead tr {
+	width: 100%;
+}
+
+.card thead tr th {
+	width: 30%;
+}
+
+.card p {
+	font-weight: bold;
+}
+
+.component_right img{
+	width:80%;
+	height:80%;
+	padding-left: 100px;
+}
+/* div {
+    border: 1px solid black;
+    box-sizing: border-box;
+} */
+
+/*수정*/
+header {
+    width: 100%;
+    height: 0.8%;
+}
+
+.header_space {
+    width: 100%;
+    height: 0.7%;
+}
+
+#nav_bar {
+    width: 99.6%;
+    height: 5.1%;
+    position: fixed;
+    z-index: 100;
+}
+
+#nav_bar > div {
+    width: 33.33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333%;
+    height: 100%;
+    float: left;
+}
+
+#nav_bar_menu ul li {
+    list-style: none;
+    float: left;
+    /* 글씨간 간격 */
+    margin: 14px;
+    margin-top: 10px;
+}
+
+#nav_bar_menu ul li a {
+    font-size: 15px;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#nav_bar_menu ul li a:hover {
+    color: dimgray;
+}
+
+#nav_bar_menu ul li:first-child {
+    margin-left: 160px;
+}
+
+#nav_bar_logo {
+    text-align: center;
+}
+
+#nav_bar_logo a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-weight: bold;
+}
+
+#cart {
+    height: 100%;
+    width: 6%;
+    float: left;
+}
+
+#cart > a {
+    text-decoration: none;
+    margin-top: 13px;
+}
+
+#login {
+    height: 100%;
+    width: 37%;
+    float: left;
+}
+
+#login > a {
+    text-decoration: none;
+    margin-top: 13px;
+}
+
+
+#wrap {
+    display: inline-block;
+    height: 40px;
+    padding: 0;
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 57%;
+}
+
+#wrap input[type="text"] {
+    height: 40px;
+    font-size: 16px;
+    display: inline-block;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-weight: 20;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 3px;
+    padding-right: 30px;
+    width: 0px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    z-index: 3;
+    transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+    cursor: pointer;
+}
+
+#wrap input[type="text"]:focus:hover {
+    border-bottom: 1px solid black;
+}
+
+input[type="text"]:focus {
+    width: 200px;
+    z-index: 1;
+    border-bottom: 1px solid black;
+    cursor: text;
+}
+
+#wrap input[type="submit"] {
+    margin-top: 3px;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    float: right;
+    background: url(https://ifh.cc/g/YsbNTw.png);
+    text-indent: -10000px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    cursor: pointer;
+}
+
+section {
+    width: 100%;
+    height: 93%;
+}
+
+#section_space {
+    width: 100%;
+    height: 2%;
+    padding-top: 40px;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+#order_review {
+	font-weight: bolder;
+    font-size: 20px;
+}
+
+.section_space div:first-child {
+    width: 53%;
+    height: 100%;
+    float: left;
+    text-align: right;
+}
+
+.buy_review {
+    width: 47%;
+    height: 100%;
+    /*    line-height: 50px;*/
+    float: left;
+}
+.buy_review a{
+padding-right: 60px;
+}
+.aside {
+    width: 10%;
+    height: 100%;
+    float: left;
+}
+
+.section_main {
+    width: 80%;
+    height: 100%;
+    float: left;
+}
+
+/*세부사항*/
+
+#detail_main {
+    width: 100%;
+    height: 18.7%;
+}
+
+.detail_main_left {
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+
+.detail_main_right {
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+
+#account {
+    width: 100%;
+    height: 2%;
+}
+
+#basket {
+    width: 100%;
+    height: 5%;
+    text-align: right;
+    line-height: 165px;
+    padding-right: 100px;
+}
+
+#basket a {
+    text-decoration: none;
+}
+
+#info {
+    width: 100%;
+    height: 3%;
+}
+
+#info a {
+    text-decoration: none;
+    font-size: 30px;
+    line-height: 220px;
+    color: black;
+    font-weight: bolder;
+    padding-left: 90px;
+}
+
+#info a:hover {
+    color: darkred;
+}
+
+#content {
+    width: 100%;
+    height: 38%;
+}
+
+.component {
+    width: 50%;
+    height: 20%;
+    float: left;
+}
+
+.component_left {
+    width: 45%;
+    height: 100%;
+    float: left;
+    padding-left: 95px;
+    font-size: 13px;
+}
+
+.component_right {
+    width: 55%;
+    height: 100%;
+    float: left;
+}
+
+.detail_main_top {
+    width: 100%;
+    height: 37%;
+}
+
+.detail_main_bottom {
+    width: 100%;
+    height: 40%;
+}
+
+#detail_main table {
+    width: 100%;
+    height: 100%;
+}
+
+#detail_main table th {
+    /*    text-align: center;*/
+}
+
+.detail_img {
+    width: 40%;
+    /*    text-align: center;*/
+}
+
+.detail_component {
+    width: 30%;
+    text-align: center;
+}
+
+.detail_count {
+    width: 10%;
+    text-align: right;
+    padding-right: 18px;
+
+}
+
+.detail_price {
+    width: 20%;
+    text-align: center;
+}
+
+.detail_main_top {
+    width: 100%;
+    height: 15%;
+
+}
+
+.detail_main_top_left {
+    width: 78%;
+    height: 100%;
+    float: left;
+    text-align: right;
+    font-size: 25px;
+    line-height: 95px;
+    padding-right: 25px;
+}
+
+.detail_main_top_right {
+    width: 22%;
+    height: 100%;
+    float: left;
+    line-height: 80px;
+    padding-left: 20px;
+    font-size: 50px;
+}
+
+/* 수정 11.01 */
+.review {
+    width: 100%;
+    height: 14%;
+
+}
+
+.accordion_sub {
+    display: none;
+}
+
+.accordion_title {
+    width: 100%;
+    height: 12%;
+}
+
+.accordion_sub {
+    width: 100%;
+    height: 20%;
+    padding-left: 95px;
+}
+
+.review_title {
+    width: 100%;
+    height: 15%;
+    text-align: center;
+}
+
+.accordion_title_left {
+    width: 60%;
+    height: 100%;
+    float: left;
+   	padding-left: 95px;
+}
+
+.accordion_title_middle {
+    width: 20%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+.accordion_title_right {
+    width: 20%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+.review_title_left {
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+
+.review_title_middle {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.review_title_right {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.review_contents {
+    width: 100%;
+    height: 90%;
+}
+
+
+.notice {
+    width: 100%;
+    height: 19.7%;
+}
+
+.notice_change {
+    width: 100%;
+    height: 70%;
+}
+
+.notice_change_left {
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+
+.notice_change_right {
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+
+.notice_warning {
+    width: 100%;
+    height: 30%;
+}
+
+.notice_warning_left {
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+
+.notice_warning_right {
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+
+footer {
+    width: 100%;
+    height: 5.5%;
+}
+
+#footer_icon {
+    width: 10%;
+    height: 100%;
+    float: left;
+    text-align: right;
+}
+
+#footer_contents {
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+
+#footer_contents ul li {
+    list-style: none;
+    font-size: 17px;
+    font-family: 'Sawarabi Gothic', sans-serif;
+}
+
+#footer_empty {
+    width: 100%;
+    height: 20%;
+    float: left;
+}
+
+#footer_icon_split {
+    width: 100%;
+    height: 40%;
+    float: left;
+}
+
+#footer_contents1 {
+    width: 100%;
+    height: 40%;
+    float: left;
+}

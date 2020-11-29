@@ -1,0 +1,508 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap');
+
+/* 검색창 css 부분 */
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(https://raw.github.com/FortAwesome/Font-Awesome/master/docs/assets/css/font-awesome.min.css);
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+
+
+body {
+    width: 1890px;
+    height: 2400px;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+ /* div {
+    border: 1px solid black;
+}  */
+
+
+
+header {
+    width: 100%;
+    height: 2%;
+}
+
+#nav_bar {
+    width: 99.6%;
+    height: 5.1%;
+    position: fixed;
+    z-index: 100;
+}
+
+#nav_bar > div {
+    width: 33.33333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333%;
+    height: 100%;
+    float: left;
+}
+
+#nav_bar_menu ul li {
+    list-style: none;
+    float: left;
+    /* 글씨간 간격 */
+    margin: 14px;
+    margin-top: 10px;
+}
+
+#nav_bar_menu ul li a {
+    font-size: 15px;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#nav_bar_menu ul li a:hover {
+    color: dimgray;
+}
+
+#nav_bar_menu ul li:first-child {
+    margin-left: 160px;
+}
+
+#nav_bar_logo {
+    text-align: center;
+}
+
+#nav_bar_logo a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-weight: bold;
+}
+
+#cart {
+    height: 100%;
+    width: 6%;
+    float: left;
+}
+
+#cart > a {
+    text-decoration: none;
+    margin-top: 13px;
+}
+
+#login {
+    height: 100%;
+    width: 37%;
+    float: left;
+}
+
+#login > a {
+    text-decoration: none;
+    margin-top: 13px;
+}
+
+
+
+#wrap {
+    display: inline-block;
+    height: 40px;
+    padding: 0;
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 57%;
+}
+
+
+#wrap input[type="text"] {
+    height: 40px;
+    font-size: 16px;
+    display: inline-block;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    font-weight: 20;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 3px;
+    padding-right: 30px;
+    width: 0px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    z-index: 3;
+    transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+    cursor: pointer;
+}
+
+#wrap input[type="text"]:focus:hover {
+    border-bottom: 1px solid black;
+}
+
+#wrap input[type="text"]:focus {
+    width: 200px;
+    z-index: 1;
+    border-bottom: 1px solid black;
+    cursor: text;
+}
+
+#wrap input[type="submit"] {
+    margin-top: 3px;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    float: right;
+    background: url(https://ifh.cc/g/YsbNTw.png);
+    text-indent: -10000px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    cursor: pointer;
+}
+
+
+
+section {
+    width: 100%;
+    height: 60%;
+}
+
+#main_image {
+    width: 100%;
+    height: 57%;
+}
+
+#slide{
+ 	width: 100%;
+    height: 100%;
+}
+#section_title {
+    width: 100%;
+    height: 20%;
+    float: left;
+    font-size: 17px;
+    font-family: 'Sawarabi Gothic', sans-serif;
+    line-height: 100px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/*Recommend*/
+.section_title_top {
+    width: 100%;
+    height: 40%;
+}
+
+.section_title_top_left {
+    width: 10%;
+    height: 100%;
+    float: left;
+
+}
+
+.section_title_top_middle {
+    width: 80%;
+    height: 100%;
+    float: left;
+    line-height: 200px;
+
+}
+
+.recommend_title {
+    width: 53.5%;
+    height: 100%;
+    float: left;
+    text-align: right;
+}
+
+.recommend_search {
+    width: 46.5%;
+    height: 100%;
+    float: left;
+    line-height: 185px;
+}
+
+.section_title_top_right {
+    width: 10%;
+    height: 100%;
+    float: left;
+}
+
+.section_title_bottom {
+    width: 100%;
+    height: 60%;
+}
+
+
+.section_title_bottom_left {
+    width: 10%;
+    height: 100%;
+    float: left;
+
+}
+
+.section_title_bottom_middle {
+    width: 80%;
+    height: 100%;
+    float: left;
+}
+
+.section_title_bottom_middle div {
+    width: 100%;
+    height: 100%;
+}
+
+.section_title_bottom_middle div > ul {
+    padding-top: 50px;
+    margin-left: 390px;
+}
+
+
+.section_title_bottom_middle ul {
+    /* 메인 메뉴 안의 ul을 설정함: 상위메뉴의 ul+하위 메뉴의 ul */
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+.section_title_bottom_middle ul li {
+    /* 메인 메뉴 안에 ul 태그 안에 있는 li 태그의 스타일 적용(상위/하위메뉴 모두) */
+    color: white;
+/*    background-color: #2d2d2d;*/
+    float: left;
+    line-height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+}
+
+.menuLink,
+.submenuLink {
+    /* 상위 메뉴와 하위 메뉴의 a 태그에 공통으로 설정할 스타일 */
+    text-decoration: none;
+    display: block;
+    width: 150px;
+    font-size: 18px;
+    font-weight: bold;
+/*    font-family: "Trebuchet MS", Dotum;*/
+}
+
+.menuLink {
+    /* 상위 메뉴의 글씨색을 흰색으로 설정 */
+    color: black;
+    text-decoration: none;
+
+}
+
+.topMenuLi:hover .menuLink {
+    /* 상위 메뉴의 li에 마우스오버 되었을 때 스타일 설정 */
+    color: red;
+}
+
+.topMenuLi a{
+	text-decoration:none;
+}
+
+.submenuLink {
+    /* 하위 메뉴의 a 태그 스타일 설정 */
+    color: #2d2d2d;
+/*    background-color: white;*/
+/*    border: solid 1px black;*/
+    padding-top: 8px;
+    margin-right: -1px;
+    font-size: 13px;
+    /* [변경] 위 칸의 하단 테두리와 아래칸의 상단 테두리가 겹쳐지도록 설덩 */
+}
+
+.submenu {
+    /* 하위 메뉴 스타일 설정 */
+    position: absolute;
+    height: 0px;
+    overflow: hidden;
+   	transition: height .2s;
+    -webkit-transition: height .2s;
+    -moz-transition: height .2s;
+    -o-transition: height .2s;
+    width: 574px; 
+    /* [변경] 가로 드랍다운 메뉴의 넓이 */
+}
+
+.submenu li {
+    display: inline-block;
+    /* [변경] 가로로 펼쳐지도록 설정 */
+}
+
+.topMenuLi:hover .submenu {
+    /* 상위 메뉴에 마우스 모버한 경우 그 안의 하위 메뉴 스타일 설정 */
+    height: 32px;
+    /* [변경] 높이를 32px로 설정 */
+}
+
+.submenuLink:hover {
+    /* 하위 메뉴의 a 태그의 마우스 오버 스타일 설정 */
+    color: red;
+/*    background-color: #dddddd;*/
+}
+
+
+
+.section_title_bottom_middle span {
+    line-height: 10px;
+}
+
+.section_title_bottom_right {
+    width: 10%;
+    height: 100%;
+    float: left;
+}
+
+
+
+
+
+.section_title_top #empty_space {
+    width: 100%;
+    height: 100%;
+}
+
+
+#section_title p {
+    margin-top: 9px;
+}
+
+#empty_space {
+    width: 10%;
+    height: 30%;
+    /*    20% */
+    float: left
+}
+
+#section_contents {
+    width: 80%;
+    height: 30%;
+    /*   20% */
+    float: left;
+}
+
+#section_contents_inner {
+    width: 22%;
+    height: 100%;
+    float: left;
+}
+
+#section_contents_inner div {
+    width: 100%;
+
+}
+
+#section_contents_inner a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Sawarabi Gothic', sans-serif;
+}
+
+.card img:hover{
+	transform: scale(1.1);
+	transition: all 0.3s ease-in-out; 
+}
+
+#section_contents_inner img {
+    width: 328px;
+    height: 260px;
+}
+
+#section_contents_inner_empty {
+    width: 4%;
+    height: 100%;
+    float: left;
+}
+
+#section_contents_bottom_empty {
+    width: 10%;
+    height: 5%;
+    float: left
+}
+
+#section_contents_bottom {
+    width: 80%;
+    height: 5%;
+    /*   15% */
+    float: left;
+}
+
+.pagination {
+    position: relative;
+    left: 40%;
+}
+
+#section_contents_bottom a {
+    color: black;
+    background-color: lightgray;
+    margin: 5px;
+}
+
+#section_contents_bottom a:hover {
+    color: white;
+    background-color: dimgray;
+}
+
+
+#empty_space1 {
+    width: 100%;
+    height: 3%;
+    float: left;
+}
+
+#empty_space2 {
+    width: 10%;
+    height: 25%;
+    float: left
+}
+
+
+footer {
+    width: 100%;
+    height: 28%;
+}
+
+#footer_icon {
+    width: 10%;
+    height: 25%;
+    float: left;
+    text-align: right;
+}
+
+#footer_contents {
+    width: 30%;
+    height: 25%;
+    float: left;
+}
+
+#footer_contents ul li {
+    list-style: none;
+    font-size: 17px;
+    font-family: 'Sawarabi Gothic', sans-serif;
+}
+
+#footer_empty {
+    width: 100%;
+    height: 20%;
+    float: left;
+}
+
+#footer_icon_split {
+    width: 100%;
+    height: 40%;
+    float: left;
+}
+
+#footer_contents1 {
+    width: 100%;
+    height: 40%;
+    float: left;
+}
+
+/* 캐러셀 */
