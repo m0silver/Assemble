@@ -2,6 +2,8 @@ package deal.controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -64,7 +66,10 @@ public class DealModifyServlet extends HttpServlet {
 		if (result > 0) {
 			response.sendRedirect("/deal/main");
 		} else {
-			// 오류 페이지
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter writer = response.getWriter();
+			writer.println("<script>alert('게시물 수정에 실패하였습니다.'); location.href='/deal/main';</script>");
+			writer.close();
 		}
 		
 	}

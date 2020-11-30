@@ -1,6 +1,8 @@
 package deal.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -37,7 +39,10 @@ public class DealDeleteServlet extends HttpServlet {
 		if (result > 0) {
 			response.sendRedirect("/deal/main");
 		} else {
-			// 삭제가 안되었을 때 코드
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter writer = response.getWriter();
+			writer.println("<script>alert('게시물 삭제에 실패했습니다.'); location.href='/deal/main';</script>");
+			writer.close();
 		}
 	}
 

@@ -1,6 +1,7 @@
 package deal.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -55,7 +56,10 @@ public class DealSearchServlet extends HttpServlet {
 			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/deal/dealMain.jsp");
 			view.forward(request, response);
 		} else {
-			// 리스트를 불러오지 못했을때 나올 코드!
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter writer = response.getWriter();
+			writer.println("<script>alert('검색된 게시물이 없습니다.'); location.href='/deal/main';</script>");
+			writer.close();
 		}
 		
 		

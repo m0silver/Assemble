@@ -3,6 +3,7 @@ package deal.controller;
 import java.io.File;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -64,20 +65,14 @@ public class DealWriteServlet extends HttpServlet {
 
 	    int result = new DealService().insertDeal(deal);
 	    
-//	    String memberId = deal.getMemberId();
-//	    String memberId = ((Member)session.getAttribute("member")).getMemberId();
-//		if (session != null && (session.getAttribute("deal")!=null)) {
-//			memberId = ((Member)session.getAttribute("member")).getMemberId();
 			if (result > 0) {
 				response.sendRedirect("/deal/main");
 			} else {
-				// insert가 실패했을때 넣을 메시지!
+				response.setContentType("text/html; charset=UTF-8");
+				PrintWriter writer = response.getWriter();
+				writer.println("<script>alert('상품등록에 실패하였습니다.'); location.href='/deal/main';</script>");
+				writer.close();
 			}
-			
-//		} else {
-//			// 로그인을 하지 않았을때 넣을 메시지!
-//		}
-		
 	}
 
 	/**

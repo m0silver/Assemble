@@ -1,6 +1,7 @@
 package deal.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -62,8 +63,10 @@ public class DealMain extends HttpServlet {
 			view.forward(request, response);
 			
 		} else {
-			// deal 페이지를 불러오지 못할때 코드!
-			response.sendRedirect("/views/deal/Error.html");
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter writer = response.getWriter();
+			writer.println("<script>alert('중고거래 게시물 조회에 실패했습니다.'); location.href='/mainpage/view';</script>");
+			writer.close();
 		}
 		
 	}

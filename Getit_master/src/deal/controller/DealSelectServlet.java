@@ -1,6 +1,7 @@
 package deal.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -49,7 +50,10 @@ public class DealSelectServlet extends HttpServlet {
 			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/views/deal/dealContents.jsp");
 			view.forward(request, response);
 		} else {
-			// 게시물 내용 불러오지못할때 오류코드!
+			response.setContentType("text/html; charset=UTF-8");
+			PrintWriter writer = response.getWriter();
+			writer.println("<script>alert('게시물 조회에 실패했습니다.'); location.href='/deal/main';</script>");
+			writer.close();
 		}
 		
 	}
